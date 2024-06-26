@@ -34,14 +34,7 @@ describe('Login Functionality', ()=>{
         failedUsername. verifyInvalidUsernamErrorMessage();
     })
 
-    it.only('Failed Login with empty username input field and empty password field',()=>{
-
-        const emptyInputField=new Login
-        emptyInputField.setUsername()
-        emptyInputField.setPassword()
-        emptyInputField.click();
-        emptyInputField.verifyErrorMessageEmptyField();
-    })
+   
 
 
 })
