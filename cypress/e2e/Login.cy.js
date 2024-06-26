@@ -15,13 +15,33 @@ describe('Login Functionality', ()=>{
         
     })
 
-    it('Failed Login with invalid credentials with error message verification',()=>{
+    it('Failed Login with valid username and valid password',()=>{
 
-        const failed=new Login
-        failed.setUsername('student')
-        failed.setPassword('Password')
-        failed.click();
-        failed.verifyErrorMessage();
+        const failedPassword=new Login
+        failedPassword.setUsername('student')
+        failedPassword.setPassword('Password')
+        failedPassword.click();
+        failedPassword.verifyInvalidPasswordErrorMessage();
 
     })
+
+    it('Failed Login with invalid username and valid password',()=>{
+
+        const failedUsername=new Login
+        failedUsername.setUsername('employee')
+        failedUsername.setPassword('Password123')
+        failedUsername.click();
+        failedUsername. verifyInvalidUsernamErrorMessage();
+    })
+
+    it('Failed Login with empty username input field and empty password field',()=>{
+
+        const emptyInputField=new Login
+        emptyInputField.setUsername('')
+        emptyInputField.setPassword('')
+        emptyInputField.click();
+        emptyInputField.verifyErrorMessageEmptyField();
+    })
+
+
 })

@@ -1,5 +1,6 @@
 class Login
 {
+    
     setUsername(username)
     {
         cy.get('#username').type(username);
@@ -24,10 +25,22 @@ class Login
 
     }
 
-    verifyErrorMessage()
+    verifyInvalidPasswordErrorMessage()
     {
         cy.get('div[id="error"]').should('be.visible')
         .and('have.text','Your password is invalid!');
+    }
+
+    verifyInvalidUsernamErrorMessage()
+    {
+        cy.get('div[id="error"]').should('be.visible')
+        .and('have.text','Your username is invalid!');
+    }
+
+    verifyErrorMessageEmptyField()
+    {
+        cy.get('div[id="error"]').should('be.visible')
+        .and('have.text','Your username is invalid!');
     }
 
 
