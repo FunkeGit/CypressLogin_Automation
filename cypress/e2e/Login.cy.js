@@ -34,11 +34,11 @@ describe('Login Functionality', ()=>{
         failedUsername. verifyInvalidUsernamErrorMessage();
     })
 
-    it('Failed Login with empty username input field and empty password field',()=>{
+    it.only('Failed Login with empty username input field and empty password field',()=>{
 
         const emptyInputField=new Login
-        emptyInputField.setUsername('')
-        emptyInputField.setPassword('')
+        emptyInputField.setUsername()
+        emptyInputField.setPassword()
         emptyInputField.click();
         emptyInputField.verifyErrorMessageEmptyField();
     })

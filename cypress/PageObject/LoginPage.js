@@ -37,12 +37,7 @@ class Login
         .and('have.text','Your username is invalid!');
     }
 
-    verifyErrorMessageEmptyField()
-    {
-        cy.get('div[id="error"]').should('be.visible')
-        .and('have.text','Your username is invalid!');
-    }
-
+    
 
 }
 
