@@ -15,7 +15,7 @@ describe('Login Functionality', ()=>{
         
     })
 
-    it('Failed Login with valid username and valid password',()=>{
+    it('Failed Login with valid username and invalid password',()=>{
 
         const failedPassword=new Login
         failedPassword.setUsername('student')
